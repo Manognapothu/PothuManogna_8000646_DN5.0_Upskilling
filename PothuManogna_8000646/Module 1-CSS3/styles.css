@@ -1,0 +1,308 @@
+/* Universal Selector */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body Styles */
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background-color:#f4f4f4;
+
+    background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20250709/pngtree-global-social-network-with-interconnected-people-and-digital-links-image_17606694.webp');
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+    color:#333;
+}
+
+/* Header Styles */
+
+#mainHeader{
+
+    background:linear-gradient(to right,#004080,#0066cc);
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+/* Navigation Styles */
+
+nav{
+
+    background-color:rgba(0,0,0,0.8);
+
+    padding:15px;
+}
+
+.navMenu{
+
+    display:flex;
+
+    justify-content:center;
+
+    list-style-type:none;
+
+    gap:20px;
+}
+
+/* Link Styles */
+
+a:link{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+a:hover{
+
+    color:yellow;
+}
+
+a:active{
+
+    color:red;
+}
+
+a:visited{
+
+    color:lightgray;
+}
+
+/* Section Styles */
+
+section{
+
+    width:90%;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background-color:rgba(255,255,255,0.9);
+
+    border-radius:10px;
+
+    box-shadow:0px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Event Card */
+
+.eventCard{
+
+    border:2px solid #ddd;
+
+    padding:20px;
+
+    margin:20px auto;
+}
+
+/* Welcome Banner */
+
+#welcomeBanner{
+
+    background-color:#2196F3;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:8px;
+}
+
+/* Highlight Class */
+
+.highlight{
+
+    background-color:yellow;
+
+    padding:5px;
+
+    font-weight:bold;
+}
+
+/* Element Selector */
+
+h2{
+
+    background:linear-gradient(to right,purple,blue);
+
+    color:white;
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+/* Grouping Selector */
+
+h3,p{
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+/* Table Styles */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    text-align:center;
+}
+
+th,td{
+
+    border:1px solid gray;
+
+    padding:10px;
+}
+
+tr:nth-child(even){
+
+    background-color:#f2f2f2;
+}
+
+/* Gallery Images */
+
+.gallery-img{
+
+    width:250px;
+
+    height:150px;
+
+    border:3px solid #333;
+
+    border-radius:10px;
+
+    transition:transform 0.3s;
+}
+
+/* Form Styles */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+input,
+select,
+textarea,
+button{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    font-size:16px;
+}
+
+/* Focus Outline */
+
+input:focus,
+textarea:focus{
+
+    outline:3px solid blue;
+}
+
+/* Button */
+
+button{
+
+    background-color:#004080;
+
+    color:white;
+
+    cursor:pointer;
+
+    border:none;
+}
+
+button:hover{
+
+    background-color:#0066cc;
+}
+
+/* Multi Column Layout */
+
+.newsArticle{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+}
+
+/* Footer */
+
+footer{
+
+    background-color:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    margin-top:20px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:768px){
+
+    .navMenu{
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .gallery-img{
+
+        width:100%;
+
+        height:auto;
+    }
+
+    h1{
+
+        font-size:24px;
+    }
+
+    body{
+
+        font-size:14px;
+    }
+
+    .newsArticle{
+
+        column-count:1;
+    }
+}

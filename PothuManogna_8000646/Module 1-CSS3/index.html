@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Community Event Portal</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="mainHeader">
+
+        <!-- Inline CSS Example -->
+        <h1 style="color:red;">
+            Local Community Event Portal
+        </h1>
+
+        <p>
+            Connecting Residents with Community Activities
+        </p>
+
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+
+        <ul class="navMenu">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#registration">Register</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+            <li><a href="help.html" target="_blank">Help</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="eventCard">
+
+            <div id="welcomeBanner">
+
+                <h2>Welcome Resident!</h2>
+
+                <p>
+                    Enjoy our latest community events.
+
+                    <span style="color:red; font-weight:bold;">
+                        Special Offer: Free entry for first 50 registrations!
+                    </span>
+
+                </p>
+
+            </div>
+
+            <p class="highlight">
+                Stay updated with exciting local programs.
+            </p>
+
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="eventCard">
+
+            <h2>Community Event Gallery</h2>
+
+            <table>
+
+                <tr>
+
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BFHXJb1pxMMJ8TLn8iyDMkD5YD9PvFBA-g&s"
+                             alt="Music Festival"
+                             title="Music Festival"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Music Festival</b></p>
+                    </td>
+
+                    <td>
+                        <img src="https://www.hpsbegumpet.org.in/wp-content/uploads/2023/02/2A2A2969-1024x683.jpg"
+                             alt="Food Carnival"
+                             title="Food Carnival"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Food Carnival</b></p>
+                    </td>
+
+                    <td>
+                        <img src="https://penntoday.upenn.edu/sites/default/files/2025-01/maybe-main.jpg"
+                             alt="Art Exhibition"
+                             title="Art Exhibition"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Art Exhibition</b></p>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEUFwhlgQjHUE_7LcILdA-VCl5ZpcN57mAYQ&s"
+                             alt="Marathon Event"
+                             title="Marathon Event"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Marathon Event</b></p>
+                    </td>
+
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWFlZoaUtGFTXL8E_0lNmq_6RPs--dSkiVeg&s"
+                             alt="Tech Meetup"
+                             title="Tech Meetup"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Tech Meetup</b></p>
+                    </td>
+
+                    <td>
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/070/863/407/small/diverse-community-volunteers-working-together-to-clean-up-a-local-park-photo.jpg"
+                             alt="Community Cleanup"
+                             title="Community Cleanup"
+                             class="gallery-img"
+                             ondblclick="enlargeImage(this)">
+
+                        <p><b>Community Cleanup</b></p>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="eventCard">
+
+            <h2>Event Registration Form</h2>
+
+            <form id="eventForm">
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your full name"
+                       required
+                       autofocus>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <input type="date"
+                       id="eventDate"
+                       required>
+
+                <input type="text"
+                       id="phone"
+                       placeholder="Enter phone number"
+                       onblur="validatePhone()"
+                       required>
+
+                <select id="eventType"
+                        onchange="showFee()"
+                        required>
+
+                    <option value="">Select Event Type</option>
+
+                    <option value="Music Festival">Music Festival</option>
+
+                    <option value="Food Carnival">Food Carnival</option>
+
+                    <option value="Tech Meetup">Tech Meetup</option>
+
+                </select>
+
+                <p id="feeDisplay"></p>
+
+                <textarea id="feedback"
+                          rows="5"
+                          placeholder="Enter feedback"
+                          onkeyup="countCharacters()"></textarea>
+
+                <p id="charCount">Characters: 0</p>
+
+                <button type="submit"
+                        onclick="showConfirmation()">
+                    Register
+                </button>
+
+                <output id="confirmationMessage"></output>
+
+            </form>
+
+        </section>
+
+        <!-- Multi Column News Section -->
+        <section class="eventCard">
+
+            <h2>Community Bulletin</h2>
+
+            <div class="newsArticle">
+
+                The city council has launched several new initiatives to improve local engagement and encourage residents to participate in cultural and educational activities. Upcoming programs include music festivals, environmental awareness campaigns, food fairs, and technology workshops for students and professionals.
+
+                Residents are encouraged to register early to receive benefits and participate in volunteer programs. The community center will also organize awareness drives, health camps, and educational seminars during the upcoming season.
+
+            </div>
+
+        </section>
+
+        <!-- Video Section -->
+        <section class="eventCard">
+
+            <h2>Event Promo Video</h2>
+
+            <video width="500"
+                   controls
+                   oncanplay="videoReady()">
+
+                <source src="videos/community-event.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <p id="videoMessage"></p>
+
+        </section>
+
+        <!-- Geolocation -->
+        <section class="eventCard">
+
+            <h2>Find Nearby Events</h2>
+
+            <button onclick="findLocation()">
+                Find Nearby Events
+            </button>
+
+            <p id="locationResult"></p>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="eventCard">
+
+            <h2>Contact Us</h2>
+
+            <p>Email: community@cityportal.com</p>
+
+            <p>Phone: +91 8500396539</p>
+
+        </section>
+
+        <!-- Storage -->
+        <section class="eventCard">
+
+            <h2>User Preferences</h2>
+
+            <button onclick="clearPreferences()">
+                Clear Preferences
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+
+    </footer>
+
+    <script>
+
+        // Validate Phone Number
+        function validatePhone() {
+
+            let phone =
+                document.getElementById("phone").value;
+
+            if(phone.length < 10 || isNaN(phone)) {
+
+                alert("Please enter valid phone number");
+
+            }
+        }
+
+        // Show Fee
+        function showFee() {
+
+            let event =
+                document.getElementById("eventType").value;
+
+            console.log("Selected Event:", event);
+
+            let fee = "";
+
+            if(event === "Music Festival") {
+
+                fee = "Event Fee: ₹500";
+
+            }
+
+            else if(event === "Food Carnival") {
+
+                fee = "Event Fee: ₹300";
+
+            }
+
+            else if(event === "Tech Meetup") {
+
+                fee = "Event Fee: ₹200";
+
+            }
+
+            console.log("Fee Value:", fee);
+
+            document.getElementById("feeDisplay").innerHTML = fee;
+
+            localStorage.setItem("preferredEvent", event);
+
+            console.log("Saved to localStorage");
+
+        }
+
+        // Form Confirmation
+        function showConfirmation() {
+
+            document.getElementById("confirmationMessage").value =
+                "Registration submitted successfully!";
+
+        }
+
+        // Image Zoom
+        function enlargeImage(img) {
+
+            if(img.style.transform === "scale(1.5)") {
+
+                img.style.transform = "scale(1)";
+
+            }
+
+            else {
+
+                img.style.transform = "scale(1.5)";
+
+            }
+
+        }
+
+        // Character Count
+        function countCharacters() {
+
+            let text =
+                document.getElementById("feedback").value;
+
+            document.getElementById("charCount").innerHTML =
+                "Characters: " + text.length;
+
+        }
+
+        // Video Ready
+        function videoReady() {
+
+            document.getElementById("videoMessage").innerHTML =
+                "Video ready to play";
+
+        }
+
+        // Warn Before Leaving
+        window.onbeforeunload = function() {
+
+            return "You have unsaved changes.";
+
+        };
+
+        // Load Saved Event
+        window.onload = function() {
+
+            let savedEvent =
+                localStorage.getItem("preferredEvent");
+
+            if(savedEvent) {
+
+                document.getElementById("eventType").value =
+                    savedEvent;
+
+                showFee();
+
+            }
+
+        };
+
+        // Clear Storage
+        function clearPreferences() {
+
+            localStorage.clear();
+
+            sessionStorage.clear();
+
+            alert("Preferences cleared");
+
+        }
+
+        // Geolocation
+        function findLocation() {
+
+            if(navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(
+
+                    function(position) {
+
+                        document.getElementById("locationResult").innerHTML =
+
+                            "Latitude: " +
+                            position.coords.latitude +
+
+                            "<br>Longitude: " +
+                            position.coords.longitude;
+
+                    },
+
+                    function(error) {
+
+                        alert("Location access denied");
+
+                    },
+
+                    {
+                        enableHighAccuracy:true,
+                        timeout:10000
+                    }
+
+                );
+
+            }
+
+        }
+
+        console.log("Portal Loaded Successfully");
+
+    </script>
+
+</body>
+</html>

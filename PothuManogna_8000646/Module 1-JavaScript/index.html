@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Community Event Portal</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="mainHeader">
+
+        <h1>
+            Local Community Event Portal
+        </h1>
+
+        <p>
+            Connecting Residents with Community Activities
+        </p>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+
+        <ul class="navMenu">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#registration">Register</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Home -->
+        <section id="home" class="eventCard">
+
+            <div id="welcomeBanner">
+
+                <h2>Welcome Resident!</h2>
+
+                <p>
+                    Enjoy our latest community events.
+
+                    <span class="specialOffer">
+                        Free entry for first 50 registrations!
+                    </span>
+
+                </p>
+
+            </div>
+
+            <p class="highlight">
+                Stay updated with exciting local programs.
+            </p>
+
+        </section>
+
+        <!-- Filter -->
+        <section class="eventCard">
+
+            <h2>Filter Events</h2>
+
+            <select id="categoryFilter">
+
+                <option value="All">All</option>
+
+                <option value="Music">Music</option>
+
+                <option value="Food">Food</option>
+
+                <option value="Technology">Technology</option>
+
+                <option value="Sports">Sports</option>
+
+            </select>
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search event name">
+
+        </section>
+
+        <!-- Dynamic Event Container -->
+        <section id="events" class="eventCard">
+
+            <h2>Upcoming Events</h2>
+
+            <div id="loadingSpinner">
+                Loading Events...
+            </div>
+
+            <div id="eventContainer"></div>
+
+        </section>
+
+        <!-- Registration -->
+        <section id="registration" class="eventCard">
+
+            <h2>Event Registration Form</h2>
+
+            <form id="eventForm">
+
+                <input type="text"
+                       name="name"
+                       placeholder="Enter your full name">
+
+                <small class="error" id="nameError"></small>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email">
+
+                <small class="error" id="emailError"></small>
+
+                <select name="selectedEvent">
+
+                    <option value="">Select Event</option>
+
+                    <option value="Music Fiesta">Music Fiesta</option>
+
+                    <option value="Food Carnival">Food Carnival</option>
+
+                    <option value="Tech Meetup">Tech Meetup</option>
+
+                </select>
+
+                <small class="error" id="eventError"></small>
+
+                <textarea id="feedback"
+                          rows="5"
+                          placeholder="Enter feedback"></textarea>
+
+                <p id="charCount">Characters: 0</p>
+
+                <button type="submit" id="registerBtn">
+                    Register
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Community Bulletin -->
+        <section class="eventCard">
+
+            <h2>Community Bulletin</h2>
+
+            <div class="newsArticle">
+
+                The city council has launched several new initiatives to improve local engagement and encourage residents to participate in cultural and educational activities.
+
+                Upcoming programs include music festivals, environmental awareness campaigns, food fairs, and technology workshops.
+
+            </div>
+
+        </section>
+
+        <!-- Video -->
+        <section class="eventCard">
+
+            <h2>Event Promo Video</h2>
+
+            <video width="500"
+                   controls
+                   id="promoVideo">
+
+                <source src="videos/community-event.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <p id="videoMessage"></p>
+
+        </section>
+
+        <!-- Geolocation -->
+        <section class="eventCard">
+
+            <h2>Find Nearby Events</h2>
+
+            <button id="locationBtn">
+                Find Nearby Events
+            </button>
+
+            <p id="locationResult"></p>
+
+        </section>
+
+        <!-- Framework Benefit -->
+        <section class="eventCard">
+
+            <h2>Why React or Vue?</h2>
+
+            <p>
+                Frameworks like React and Vue make UI updates faster,
+                reusable, scalable, and easier to maintain.
+            </p>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="eventCard">
+
+            <h2>Contact Us</h2>
+
+            <p>Email: community@cityportal.com</p>
+
+            <p>Phone: +91 8500396539</p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

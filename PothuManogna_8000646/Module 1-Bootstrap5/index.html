@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        section {
+            padding: 60px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .demo-box {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .pricing-card {
+            transition: 0.3s;
+        }
+        .pricing-card:hover {
+            transform: scale(1.03);
+        }
+        .overlay-badge {
+            top: 10px;
+            right: 10px;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercise 1: Setup -->
+    <div class="container mt-5">
+        <h1 class="text-primary">Bootstrap 5 Working Successfully!</h1>
+
+        <button class="btn btn-success">
+            Click Me
+        </button>
+    </div>
+    <!-- Exercise 3: Responsive Grid -->
+    <section class="container">
+        <h2 class="mb-4">Responsive Grid Layout</h2>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-box">Column 1</div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-box">Column 2</div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-box">Column 3</div>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 4: Column Layouts -->
+    <section class="container">
+        <h2 class="mb-4">Column Layouts</h2>
+        <div class="row mb-5">
+            <div class="col-md-3 bg-primary text-white p-4">
+                Sidebar
+            </div>
+            <div class="col-md-9 bg-light p-4 border">
+                Main Content Area
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-3 p-3 bg-warning">Col 1</div>
+            <div class="col-sm-3 p-3 bg-info">Col 2</div>
+            <div class="col-sm-3 p-3 bg-success text-white">Col 3</div>
+            <div class="col-sm-3 p-3 bg-danger text-white">Col 4</div>
+        </div>
+    </section>
+    <!-- Exercise 5: Alignment -->
+    <section class="container">
+        <h2 class="mb-4">Alignment and Reordering</h2>
+        <div class="row justify-content-center align-items-center bg-light"
+            style="height:200px;">
+            <div class="col-4">
+                <div class="demo-box">Centered Box</div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 order-md-2">
+                <div class="bg-success text-white p-4">
+                    First on Desktop
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="bg-warning p-4">
+                    Second on Desktop
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 6: Flex Utilities -->
+    <section class="container">
+        <h2 class="mb-4">Responsive Flexbox Utilities</h2>
+        <nav class="d-flex flex-column flex-md-row bg-dark p-3 rounded">
+            <a href="#" class="text-white text-decoration-none me-4">Home</a>
+            <a href="#" class="text-white text-decoration-none me-4">About</a>
+            <a href="#" class="text-white text-decoration-none me-4">Services</a>
+            <a href="#" class="text-white text-decoration-none">Contact</a>
+        </nav>
+        <div class="card mt-5 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h4>Product Card</h4>
+                    <p>Responsive flex layout.</p>
+                </div>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 7: Typography -->
+    <section class="container">
+        <h2 class="mb-4">Typography</h2>
+        <h1 class="display-1">Display Heading</h1>
+        <p class="lead">This is a lead paragraph.</p>
+        <p class="text-muted">Muted Text Example</p>
+        <p class="fw-bold">Bold Text Example</p>
+        <p class="text-uppercase">uppercase text</p>
+        <p class="text-lowercase">LOWERCASE TEXT</p>
+        <p class="text-capitalize">capitalize each word</p>
+    </section>
+    <!-- Exercise 8: Forms -->
+    <section class="container">
+        <h2 class="mb-4">Bootstrap Forms</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Registration Form</h4>
+                <form>
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">
+                            Accept Terms
+                        </label>
+                    </div>
+                    <button class="btn btn-primary">
+                        Register
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Login Form</h4>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <label>Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <label>Password</label>
+                    </div>
+                    <button class="btn btn-success">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 9: Buttons -->
+    <section class="container">
+        <h2 class="mb-4">Buttons</h2>
+        <div class="mb-4">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-outline-dark">Outline</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary">Left</button>
+            <button class="btn btn-primary">Middle</button>
+            <button class="btn btn-primary">Right</button>
+        </div>
+        <div class="mt-4">
+            <input type="checkbox" class="btn-check" id="btncheck1">
+            <label class="btn btn-outline-success" for="btncheck1">
+                Toggle Button
+            </label>
+        </div>
+    </section>
+    <!-- Exercise 10: Navbar -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">MyLogo</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search">
+                        <button class="btn btn-light">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Tab 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tab 2</a>
+                </li>
+            </ul>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Pill 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pill 2</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Exercise 11: Cards -->
+    <section class="container">
+        <h2 class="mb-4">Cards and Media Objects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="https://picsum.photos/400/200"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Profile Card</h4>
+                        <p class="card-text">
+                            Bootstrap profile card example.
+                        </p>
+                        <button class="btn btn-primary">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="d-flex border p-3 rounded bg-light">
+                    <img src="https://picsum.photos/100"
+                        class="rounded-circle me-3">
+                    <div>
+                        <h4>Media Object</h4>
+                        <p>
+                            Image aligned left with content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 12: Spacing -->
+    <section class="container">
+        <h2 class="mb-4">Spacing Utilities</h2>
+        <div class="bg-primary text-white m-3 p-2">
+            Margin and Padding Example
+        </div>
+        <div class="bg-success text-white mt-4 py-5 text-center">
+            Vertical Padding Example
+        </div>
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card pricing-card p-4 shadow">
+                    <h3>Basic</h3>
+                    <h4>$10</h4>
+                    <button class="btn btn-primary">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-card p-4 shadow-lg">
+                    <h3>Standard</h3>
+                    <h4>$20</h4>
+                    <button class="btn btn-success">
+                        Buy
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-card p-4 shadow">
+                    <h3>Premium</h3>
+                    <h4>$30</h4>
+                    <button class="btn btn-danger">
+                        Buy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 13: Colors -->
+    <section class="container">
+        <h2 class="mb-4">Colors and Backgrounds</h2>
+        <div class="p-4 bg-primary text-white mb-3">
+            Primary Background
+        </div>
+        <div class="p-4 bg-warning">
+            Warning Background
+        </div>
+        <div class="p-4 bg-dark bg-gradient text-white mt-3">
+            Gradient Background
+        </div>
+    </section>
+    <!-- Exercise 14: Display -->
+    <section class="container">
+        <h2 class="mb-4">Display and Visibility</h2>
+        <div class="d-none d-md-block bg-success text-white p-4 mb-3">
+            Visible on Tablets and Above
+        </div>
+        <div class="d-none d-lg-flex bg-danger text-white p-4">
+            Visible on Large Screens
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3 d-none d-md-block bg-dark text-white p-4">
+                Responsive Sidebar
+            </div>
+            <div class="col-md-9 bg-light p-4 border">
+                Main Content
+            </div>
+        </div>
+    </section>
+    <!-- Exercise 15: Borders -->
+    <section class="container">
+        <h2 class="mb-4">Borders, Shadows and Rounded</h2>
+        <img src="https://picsum.photos/150"
+            class="border border-primary border-3 rounded-circle mb-4">
+        <div class="card shadow-lg rounded-pill p-4">
+            <h4>Rounded Pill Card</h4>
+            <p>Bootstrap shadow and rounded utilities.</p>
+        </div>
+    </section>
+    <!-- Exercise 16: Position -->
+    <section class="container">
+        <h2 class="mb-4">Positioning Utilities</h2>
+        <div class="position-relative d-inline-block">
+            <img src="https://picsum.photos/300/200"
+                class="rounded">
+            <span class="badge bg-danger position-absolute overlay-badge">
+                New
+            </span>
+        </div>
+    </section>
+    <!-- Exercise 17: Icons -->
+    <section class="container">
+        <h2 class="mb-4">Bootstrap Icons</h2>
+        <button class="btn btn-primary">
+            <i class="bi bi-house-fill"></i>
+        </button>
+        <button class="btn btn-success">
+            <i class="bi bi-check-circle-fill"></i>
+        </button>
+        <button class="btn btn-danger">
+            <i class="bi bi-trash-fill"></i>
+        </button>
+    </section>
+    <!-- Exercise 18: Modal -->
+    <section class="container">
+        <h2 class="mb-4">Bootstrap JavaScript Plugins</h2>
+        <button class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Open Modal
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Bootstrap Modal</h5>
+                        <button class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        This is a Bootstrap modal popup.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Accordion -->
+        <div class="container">
+            <h2 class="mb-5">Accordion</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            What is Bootstrap?
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Bootstrap is a CSS framework for responsive web design.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Why Use Bootstrap?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            It helps create responsive websites quickly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fixed Footer -->
+    <footer class="bg-dark text-white text-center p-3 position-fixed bottom-0 w-100">
+        <p class="mb-2">
+            Bootstrap 5 Exercises Completed
+        </p>
+        <!-- Social Media Icons -->
+        <a href="#">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#">
+            <i class="bi bi-github"></i>
+        </a>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
